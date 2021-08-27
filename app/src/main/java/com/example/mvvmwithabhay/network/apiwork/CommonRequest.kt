@@ -12,6 +12,8 @@ abstract class CommonRequest {
         if (response.isSuccessful) {
             return response.body()!!
         } else {
+
+
             var error = response.errorBody()?.string()
             var message = StringBuilder()
             error?.let {
